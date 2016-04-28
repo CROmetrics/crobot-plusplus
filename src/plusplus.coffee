@@ -32,17 +32,14 @@ module.exports = (robot) ->
 
   # sweet regex bro
   robot.hear ///
-    # from beginning of line
-    ^
-    # the thing being upvoted, which is any number of words and spaces
-    ([\s\w'@.\-:]*)
-    # allow for spaces after the thing being upvoted (@user ++)
-    \s*
+    # the thing being upvoted, which is any word starting with an @ symbol (and no spaces and colons in the name)
+    (@[\w'.\-]*)
+    # allow for a single colon and any # of spaces after the thing being voted (@user ++)
+    (?::)?(?:\s*)
     # the increment/decrement operator ++ or --
     ([-+]{2}|—)
     # optional reason for the plusplus
     (?:\s+(?:for|because|cause|cuz)\s+(.+))?
-    $ # end of line
   ///i, (msg) ->
     # let's get our local vars in place
     [dummy, name, operator, reason] = msg.match
