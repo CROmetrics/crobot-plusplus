@@ -69,7 +69,7 @@ module.exports = (robot) ->
     # if we got a score, then display all the things and fire off events!
     if score?
       message = if reason?
-                  "+:thumbs#{reasonScore >= 1 ? 'up' : 'down'}:"
+                  "+:thumbs#{if reasonScore >= 1 then 'up' else 'down'}:"
                 else
                   if score == 1
                     "#{name} has #{score} point"
