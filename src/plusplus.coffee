@@ -48,6 +48,7 @@ module.exports = (robot) ->
 
     # do some sanitizing
     reason = reason?.trim().toLowerCase()
+    reason = from + ': ' + reason
 
     if name
       if name.charAt(0) == ":"
