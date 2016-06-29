@@ -4,7 +4,14 @@ hubot-plusplus
 Give (or take away) points from people and things, all from the comfort of your
 personal Hubot.
 
-Note: don't make changes here; make changes to [the official repository](https://github.com/hubot-scripts/hubot-plusplus) instead.
+IF YOU WANT TO GIVE BACK: don't make changes here; make changes to [the official repository](https://github.com/hubot-scripts/hubot-plusplus) instead.
+
+
+## Deploy
+
+1. find the most recent commit sha
+2. change the ref in https://github.com/CROmetrics/crobot/blob/master/package.json
+3. run `git pull; git push heroku master` from your local crobot repo
 
 API
 ---
