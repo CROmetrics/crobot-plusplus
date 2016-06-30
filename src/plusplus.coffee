@@ -59,7 +59,7 @@ module.exports = (robot) ->
     if mm < 10
       mm = '0' + mm
     today = yyyy + '-' + mm + '-' + dd
-    reason = today + ': ' + from + ': ' + reason
+    reason = today + ' from ' + from + ' for ' + reason
 
     if name
       if name.charAt(0) == ":"
@@ -81,15 +81,15 @@ module.exports = (robot) ->
     # if we got a score, then display all the things and fire off events!
     if score?
       message = if reason?
-                  if reasonScore == 1 or reasonScore == -1
-                    "#{name} has #{score} points, #{reasonScore} of which is for #{reason}."
+                  if operator == "++"
+                    "#{name} earned karma on #{reason}."
                   else
-                    "#{name} has #{score} points, #{reasonScore} of which are for #{reason}."
+                    "#{name} lost karma on #{reason}."
                 else
-                  if score == 1
-                    "#{name} has #{score} point"
+                  if operator == "++"
+                    "#{name} earned karma"
                   else
-                    "#{name} has #{score} points"
+                    "#{name} lost karma"
 
 
       msg.send message
