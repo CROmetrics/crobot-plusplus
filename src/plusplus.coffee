@@ -48,7 +48,18 @@ module.exports = (robot) ->
 
     # do some sanitizing
     reason = reason?.trim().toLowerCase()
-    reason = from + ': ' + reason
+
+    # add in date and from
+    today = new Date
+    dd = today.getDate()
+    mm = today.getMonth() + 1
+    yyyy = today.getFullYear()
+    if dd < 10
+      dd = '0' + dd
+    if mm < 10
+      mm = '0' + mm
+    today = yyyy + '-' + mm + '-' + dd
+    reason = today + ': ' + from + ': ' + reason
 
     if name
       if name.charAt(0) == ":"
