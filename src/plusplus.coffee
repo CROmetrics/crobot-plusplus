@@ -91,6 +91,9 @@ module.exports = (robot) ->
                   else
                     "#{name} lost karma"
 
+      robot.emit 'slack.reaction',
+        message: msg.message
+        name: 'beer' # the name of the reaction with the :
 
       msg.send message
 

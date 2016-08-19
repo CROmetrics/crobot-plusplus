@@ -23,9 +23,10 @@
     "url": "https://github.com/CROmetrics/crobot-plusplus/issues"
   },
   "dependencies": {
+    "clark": "0.0.6",
     "coffee-script": "~1.6",
-    "underscore": ">= 1.0",
-    "clark": "0.0.6"
+    "hubot-slack-reaction": "0.0.2",
+    "underscore": ">= 1.0"
   },
   "devDependencies": {
     "mocha": "*",
