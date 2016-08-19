@@ -93,9 +93,9 @@ module.exports = (robot) ->
 
       robot.emit 'slack.reaction',
         message: msg.message
-        name: 'beer' # the name of the reaction with the :
+        name: 'partyparrot' # the name of the reaction with the :
 
-      msg.send message
+      # msg.send message
 
       robot.emit "plus-one", {
         name:      name
