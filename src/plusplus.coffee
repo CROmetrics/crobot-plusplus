@@ -41,6 +41,8 @@ module.exports = (robot) ->
     # optional reason for the plusplus
     (?:\s+(?:for|because|cause|cuz)\s+(.+))?
   ///i, (msg) ->
+    robot.logger.info "msg: " + msg
+
     # let's get our local vars in place
     [dummy, name, operator, reason] = msg.match
     from = msg.message.user.name.toLowerCase()
@@ -60,6 +62,9 @@ module.exports = (robot) ->
       mm = '0' + mm
     today = yyyy + '-' + mm + '-' + dd
     reason = today + ' from ' + from + ' for ' + reason
+
+    robot.logger.info 'name: ' + name
+    robot.logger.info 'reason: ' + reason
 
     if name
       if name.charAt(0) == ":"
