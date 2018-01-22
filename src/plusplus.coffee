@@ -98,7 +98,13 @@ module.exports = (robot) ->
 
       robot.emit 'slack.reaction',
         message: msg.message
-        name: 'partyparrot' # the name of the reaction with the :
+        name: 'partyparrot'
+
+      setTimeout ->
+        robot.emit 'slack.reaction',
+          message: msg.message
+          name: 'sax'
+      , 500
 
       # msg.send message
 
