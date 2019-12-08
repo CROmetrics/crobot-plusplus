@@ -10,10 +10,6 @@
 # Commands:
 #   <name>++
 #   <name>--
-#   hubot score <name> [for <reason>]
-#   hubot top <amount>
-#   hubot bottom <amount>
-#   hubot erase <user> [<reason>]
 #
 # URLs:
 #   /hubot/scores[?name=<name>][&direction=<top|botton>][&limit=<10>]
