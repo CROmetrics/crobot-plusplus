@@ -104,13 +104,13 @@ module.exports = (robot) ->
 
       # msg.send message
 
-      # robot.emit "plus-one", {
-      #   name:      name
-      #   direction: operator
-      #   room:      room
-      #   reason:    reason
-      #   from:      from
-      # }
+      robot.emit "plus-one", {
+        name:      name
+        direction: operator
+        room:      room
+        reason:    reason
+        from:      from
+      }
 
   # robot.respond ///
   #   (?:erase )
