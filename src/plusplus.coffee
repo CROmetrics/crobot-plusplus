@@ -33,7 +33,7 @@ module.exports = (robot) ->
     # allow for a single colon and any # of spaces after the thing being voted (@user ++)
     (?::)?(?:\s*)
     # the increment/decrement operator ++ or --
-    ([-+]{2}|—)
+    ([+]{2})
     # optional reason for the plusplus
     (?:\s+(?:for|because|cause|cuz)\s+(.+))?
   ///i, (msg) ->
